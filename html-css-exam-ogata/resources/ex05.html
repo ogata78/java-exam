@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>レイアウト</title>
+
+
+     <style>
+        body{
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+
+        header, footer{
+            height: 15vh;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+      flex: 1;
+      display: flex;
+    }
+
+    nav {
+      width: 20%;
+      background-color: #bbb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    main {
+      flex: 1;
+      background-color: #aaa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    aside {
+      width: 20%;
+      background-color: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <header>ヘッダー</header>
+
+  <div class="container">
+    <nav>メニュー</nav>
+    <main>メインコンテンツ</main>
+    <aside>広告枠</aside>
+  </div>
+
+  <footer>フッター</footer>
+</body>
+</html>
