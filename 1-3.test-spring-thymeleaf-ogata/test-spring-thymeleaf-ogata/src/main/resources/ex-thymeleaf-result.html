@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>結果画面</title>
+</head>
+<body>
+    <h2>結果</h2>
+
+<!--名前-->
+<p>
+    私の名前は
+    <span th:text="${member.name}"></span>
+    です。
+</p>
+
+<!--20-->
+<p th:if="${member.age >= 20}">
+    成人です。
+</p>
+
+<!-- 20未満→未成年 -->
+<p th:unless="${member.age >= 20}">
+    未成年です。
+</p>
+
+<!--趣味-->
+<p>
+    趣味は
+    <span th:each="hobby : ${member.hobbyList}">
+        「<span th:text="${hobby}"></span>」
+    </span>
+    です。
+
+</p>
+<br>
+<a th:href="@{/exam/input}">戻る</a>
+
+
+    
+</body>
+</html>
